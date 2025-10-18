@@ -1,0 +1,40 @@
+body {
+  background: radial-gradient(circle at top left, #6E00FF, #FF2D95, #0D0128);
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 20px rgba(255, 45, 149, 0.5);
+  border-radius: 1rem;
+}
+
+.btn-gradient {
+  background: linear-gradient(90deg, #6E00FF, #FF2D95);
+  border: none;
+  color: #fff;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-gradient:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #FF2D95;
+}
+
+input.form-control {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: white;
+}
+
+input.form-control:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  box-shadow: 0 0 10px #FF2D95;
+}
