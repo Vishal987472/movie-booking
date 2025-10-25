@@ -13,21 +13,23 @@ function createTokens(userId) {
 }
 
 function sendTokens(res, tokens) {
-  // Access token short-lived
+  const isProd = process.env.NODE_ENV === 'production'
+
   res.cookie('accessToken', tokens.accessToken, {
     httpOnly: true,
-    secure: process.env.NODE_ENV === 'production', // set true in prod (HTTPS)
-    sameSite: 'None', // allow cross-site cookie in production; requires HTTPS
+    secure: isProd,
+    sameSite: isProd ? 'None' : 'Lax',
     maxAge: 15 * 60 * 1000,
   })
-  // Refresh token long-lived
+
   res.cookie('refreshToken', tokens.refreshToken, {
     httpOnly: true,
-    secure: process.env.NODE_ENV === 'production',
-    sameSite: 'None',
+    secure: isProd,
+    sameSite: isProd ? 'None' : 'Lax',
     maxAge: 7 * 24 * 60 * 60 * 1000,
   })
 }
+
 
 router.post('/register', async (req, res) => {
   try {
