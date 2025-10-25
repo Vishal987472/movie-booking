@@ -12,7 +12,7 @@ export default function App() {
     <BrowserRouter>
       <nav className="navbar navbar-dark">
         <div className="container justify-content-center gap-4 py-2">
-          <Link className="nav-link" to="/">Home</Link>
+          {/* <Link className="nav-link" to="/">Home</Link> */}
           <Link className="nav-link" to="/register">Register</Link>
           <Link className="nav-link" to="/login">Login</Link>
           <Link className="nav-link" to="/dashboard">Dashboard</Link>
@@ -20,7 +20,7 @@ export default function App() {
       </nav>
 
       <Routes>
-        <Route path="/" element={<div className="text-center mt-5">Home</div>} />
+        {/* <Route path="/" element={<div className="text-center mt-5">Home</div>} /> */}
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route

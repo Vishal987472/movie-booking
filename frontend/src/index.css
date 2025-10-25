@@ -4,6 +4,10 @@
   line-height: 1.5;
   font-weight: 400;
 
+  display: flex;
+  flex: auto;
+  flex-direction: column;
+
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
@@ -59,6 +63,10 @@ button:focus-visible {
   :root {
     color: #213547;
     background-color: #ffffff;
+      
+  display: flex;
+  flex: auto;
+  flex-direction: column;
   }
   a:hover {
     color: #747bff;
